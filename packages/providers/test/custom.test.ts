@@ -357,6 +357,7 @@ describe("calls", () => {
     expect(result.costNanoUsd).toBeUndefined();
     // Anything else on the wire says so: this style never falls back to Chat Completions.
     expect(requests).toHaveLength(1);
+  });
 
   test("a tool result's image goes to Claude on an Anthropic-compatible endpoint, never to another company's model", async () => {
     const reply = sse([
